@@ -1,7 +1,7 @@
 import { join } from 'path';
 
-import { Test, type TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
+import { Test, type TestingModule } from '@nestjs/testing';
 
 import request from 'supertest';
 import { App } from 'supertest/types';
