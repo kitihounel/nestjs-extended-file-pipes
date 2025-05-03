@@ -14,8 +14,10 @@ The missing file validation pipes for NestJS
 ## 📖 Description
 
 When dealing with file uploads, NestJS offers the `ParseFilePipe` to help validate files uploaded under the same field
-name. But when several files are uploaded with different field names, there is not built-in pipe available and the validation
+name. But when several files are uploaded under different field names, there is not built-in pipe available and the validation
 is usually done in a controller or service method.
+
+Here is an example:
 
 ```typescript
 @Post('upload')
@@ -35,7 +37,7 @@ uploadFile(
 ```
 
 This package adds two new file pipes, `ParseFileFieldsPipe` and `GroupFilesPipe` that can be used to validate multiple
-files. Their purpose is to help removing the file validation code from controllers and services methods.
+files. Their purpose is to remove the file validation code from controller and service methods.
 
 ## 📦 Installation
 
@@ -47,10 +49,17 @@ npm install nestjs-extended-file-pipes
 
 The `ParseFileFieldsPipe` is the main component of this package. Under the hood, it uses the built-in `ParseFilePipe`
 to validate the files. Its constructor accepts an `options` parameter with a `fields` property that defines for each
-file field the specific options that will passed to the underlying `ParseFilePipe` object used for validation.
+file field the specific options that will be passed to the underlying `ParseFilePipe` object used for validation.
 
 ```typescript
-import { Controller, FileTypeValidator, MaxFileSizeValidator, Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import {
+  Controller,
+  FileTypeValidator,
+  MaxFileSizeValidator,
+  Post,
+  UploadedFiles,
+  UseInterceptors
+} from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { ParseFileFieldsPipe } from 'nestjs-extended-file-pipes';
 
