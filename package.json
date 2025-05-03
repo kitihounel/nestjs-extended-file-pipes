@@ -20,6 +20,7 @@
     "format": "eslint --fix 'src/**/*.ts'",
     "lint": "eslint 'src/**/*.ts'",
     "lint:test": "eslint 'test/**/*.ts'",
+    "prepare": "npm run test && npm run build",
     "test": "jest",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
