@@ -1,0 +1,56 @@
+{
+  "name": "nestjs-extended-file-pipes",
+  "version": "1.0.0",
+  "description": "The missing file validation pipes for NestJS",
+  "license": "MIT",
+  "author": "Lionel KITIHOUN <kitihounel@gmail.com>",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "format": "eslint --fix 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:test": "eslint 'test/**/*.ts'",
+    "test": "jest",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@nestjs/common": ">=9.0.0",
+    "@nestjs/platform-express": ">=9.0.0",
+    "@nestjs/testing": ">=9.0.0",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/multer": "^1.4.12",
+    "@types/supertest": "^6.0.3",
+    "@typescript-eslint/parser": "^8.31.0",
+    "eslint": "^9.25.1",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-import": "^2.31.0",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.31.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": ">=9.0.0",
+    "@nestjs/platform-express": ">=9.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "./src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
