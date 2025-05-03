@@ -4,8 +4,17 @@
   "description": "The missing file validation pipes for NestJS",
   "license": "MIT",
   "author": "Lionel KITIHOUN <kitihounel@gmail.com>",
+  "homepage": "https://github.com/kitihounel/nestjs-extended-file-pipes",
+  "bugs": {
+    "url": "https://github.com/kitihounel/nestjs-extended-file-pipes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitihounel/nestjs-extended-file-pipes"
+  },
   "type": "commonjs",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "format": "eslint --fix 'src/**/*.ts'",
@@ -52,5 +61,14 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "keywords": [
+    "nestjs",
+    "nest",
+    "pipe",
+    "pipes",
+    "file",
+    "files",
+    "validation"
+  ]
 }
