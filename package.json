@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kitihounel/nestjs-extended-file-pipes"
+    "url": "git+https://github.com/kitihounel/nestjs-extended-file-pipes.git"
   },
   "type": "commonjs",
   "main": "dist/index.js",
